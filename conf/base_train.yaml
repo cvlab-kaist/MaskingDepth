@@ -1,0 +1,38 @@
+##### Supervised Training ######
+Train: 
+  model_name: 'MODEL_NAME'
+  log_path: './log'
+  use_cuda: True
+  seed: 42
+  start_epoch: 0
+  end_epoch: 50
+  batch_size: 4
+  num_workers: 8
+  lr: 1e-4
+  d_consistency : 0.0
+  f_consistency : 0.0
+  w_patch : 0.0
+  K: 1
+  wandb : False
+  load_optim : False
+  
+  model:
+    baseline: "DPT" # ["DPT", "monodepth2"]
+    max_depth: 80.0 # use 10 for NYU and 80 for KITTI depth
+    load_weight : False
+    weight_path : './weight'
+    mlp_head: False
+  add_model:
+    uncert: False
+    ccnn: False
+    load_weight : False
+    weight_path : './weight'
+    threshold: 0.7
+
+  data:
+    height: 192
+    width: 640
+    dataset: 'kitti_depth'
+    splits: 'eigen_full'
+    data_path: '/root/data1/KITTI'
+    img_ext: '.jpg'
