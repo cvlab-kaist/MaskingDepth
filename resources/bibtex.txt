@@ -1,6 +1,1013 @@
-@inproceedings{author20XXtitle,
-  title={Please cite me},
-  author={Author, First and Author, Second and Author, Third},
-  booktitle={Conference},
-  year={20XX}
+@String(PAMI  = {IEEE TPAMI})
+@String(IJCV  = {IJCV})
+@String(CVPR  = {CVPR})
+@String(ICCV  = {ICCV})
+@String(ECCV  = {ECCV})
+@String(NIPS  = {NeurIPS})
+@String(ICPR  = {ICPR})
+@String(BMVC  =	{BMVC})
+@String(TOG   = {ACM TOG})
+@String(TIP   = {IEEE TIP})
+@String(TVCG  = {IEEE TVCG})
+@String(TCSVT = {IEEE TCSVT})
+@String(TMM   =	{IEEE TMM})
+@String(ACMMM = {ACM MM})
+@String(ICME  =	{ICME})
+@String(ICASSP=	{ICASSP})
+@String(ICIP  = {ICIP})
+@String(ACCV  = {ACCV})
+@String(ICLR  = {ICLR})
+@String(IJCAI = {IJCAI})
+@String(PR = {PR})
+@String(AAAI = {AAAI})
+@String(CVPRW= {CVPRW})
+@String(CSVT = {IEEE TCSVT})
+@String(arXiv = {arXiv})
+
+
+@String(PAMI = {IEEE Trans. Pattern Anal. Mach. Intell.})
+@String(IJCV = {Int. J. Comput. Vis.})
+@String(CVPR= {IEEE Conf. Comput. Vis. Pattern Recog.})
+@String(ICCV= {Int. Conf. Comput. Vis.})
+@String(ECCV= {Eur. Conf. Comput. Vis.})
+@String(NIPS= {Adv. Neural Inform. Process. Syst.})
+@String(ICPR = {Int. Conf. Pattern Recog.})
+@String(ICML = {Int. Conf. on Mach. Learn. })
+@String(BMVC= {Brit. Mach. Vis. Conf.})
+@String(TOG= {ACM Trans. Graph.})
+@String(TIP  = {IEEE Trans. Image Process.})
+@String(TVCG  = {IEEE Trans. Vis. Comput. Graph.})
+@String(TMM  = {IEEE Trans. Multimedia})
+@String(ACMMM= {ACM Int. Conf. Multimedia})
+@String(ICME = {Int. Conf. Multimedia and Expo})
+@String(ICASSP=	{ICASSP})
+@String(ICIP = {IEEE Int. Conf. Image Process.})
+@String(ACCV  = {ACCV})
+@String(ICLR = {Int. Conf. Learn. Represent.})
+@String(IJCAI = {IJCAI})
+@String(PR   = {Pattern Recognition})
+@String(AAAI = {AAAI})
+@String(CVPRW= {IEEE Conf. Comput. Vis. Pattern Recog. Worksh.})
+@String(CSVT = {IEEE Trans. Circuit Syst. Video Technol.})
+
+@String(SPL	= {IEEE Sign. Process. Letters})
+@String(VR   = {Vis. Res.})
+@String(JOV	 = {J. Vis.})
+@String(TVC  = {The Vis. Comput.})
+@String(JCST  = {J. Comput. Sci. Tech.})
+@String(CGF  = {Comput. Graph. Forum})
+@String(CVM = {Computational Visual Media})
+@String(VR = {IEEE Virtual Reality})
+@String(ICRA = {IEEE Conf. Robo. Auto.})
+@String(MICCAI = {Int. Conf. Med. Img. Comput. Computer-Assisted Intervention})
+
+@String(SSCI = {IEEE Symposium Series on Comput. Intell.})
+@String(ROBIO = {IEEE Conf. Robotics and Biomimetics})
+@String(ECMR = {Eur. Conf. Mobile Robots})
+
+@article{bachman2014learning,
+  title={Learning with pseudo-ensembles},
+  author={Bachman, Philip and Alsharif, Ouais and Precup, Doina},
+  journal={NIPS},
+  volume={27},
+  year={2014}
+}
+
+@article{laine2016temporal,
+  title={Temporal ensembling for semi-supervised learning},
+  author={Laine, Samuli and Aila, Timo},
+  journal={arXiv},
+  year={2016}
+}
+
+@article{sajjadi2016regularization,
+  title={Regularization with stochastic transformations and perturbations for deep semi-supervised learning},
+  author={Sajjadi, Mehdi and Javanmardi, Mehran and Tasdizen, Tolga},
+  journal={NIPS},
+  volume={29},
+  year={2016}
+}
+
+@inproceedings{lee2013pseudo,
+  title={Pseudo-label: The simple and efficient semi-supervised learning method for deep neural networks},
+  author={Lee, Dong-Hyun and others},
+  booktitle={Workshop on challenges in representation learning, ICML},
+  volume={3},
+  number={2},
+  pages={896},
+  year={2013}
+}
+
+@article{xie2020unsupervised,
+  title={Unsupervised data augmentation for consistency training},
+  author={Xie, Qizhe and Dai, Zihang and Hovy, Eduard and Luong, Thang and Le, Quoc},
+  journal={NIPS},
+  volume={33},
+  pages={6256--6268},
+  year={2020}
+}
+
+@article{berthelot2019remixmatch,
+  title={Remixmatch: Semi-supervised learning with distribution alignment and augmentation anchoring},
+  author={Berthelot, David and Carlini, Nicholas and Cubuk, Ekin D and Kurakin, Alex and Sohn, Kihyuk and Zhang, Han and Raffel, Colin},
+  journal={arXiv},
+  year={2019}
+}
+
+@article{sohn2020fixmatch,
+  title={Fixmatch: Simplifying semi-supervised learning with consistency and confidence},
+  author={Sohn, Kihyuk and Berthelot, David and Carlini, Nicholas and Zhang, Zizhao and Zhang, Han and Raffel, Colin A and Cubuk, Ekin Dogus and Kurakin, Alexey and Li, Chun-Liang},
+  journal={NIPS},
+  volume={33},
+  pages={596--608},
+  year={2020}
+}
+
+@article{zou2020pseudoseg,
+  title={Pseudoseg: Designing pseudo labels for semantic segmentation},
+  author={Zou, Yuliang and Zhang, Zizhao and Zhang, Han and Li, Chun-Liang and Bian, Xiao and Huang, Jia-Bin and Pfister, Tomas},
+  journal={arXiv},
+  year={2020}
+}
+
+@article{french2019semi,
+  title={Semi-supervised semantic segmentation needs strong, high-dimensional perturbations},
+  author={French, Geoff and Aila, Timo and Laine, Samuli and Mackiewicz, Michal and Finlayson, Graham},
+  year={2019}
+}
+
+@inproceedings{ouali2020semi,
+  title={Semi-supervised semantic segmentation with cross-consistency training},
+  author={Ouali, Yassine and Hudelot, C{\'e}line and Tami, Myriam},
+  booktitle={CVPR},
+  pages={12674--12684},
+  year={2020}
+}
+
+@article{baek2022semi,
+  title={Semi-Supervised Learning with Mutual Distillation for Monocular Depth Estimation},
+  author={Baek, Jongbeom and Kim, Gyeongnyeon and Kim, Seungryong},
+  journal={arXiv},
+  year={2022}
+}
+
+@article{cho2021deep,
+  title={Deep monocular depth estimation leveraging a large-scale outdoor stereo dataset},
+  author={Cho, Jaehoon and Min, Dongbo and Kim, Youngjung and Sohn, Kwanghoon},
+  journal={Expert Systems with Applications},
+  volume={178},
+  pages={114877},
+  year={2021},
+  publisher={Elsevier}
+}
+
+@article{kim2020structured,
+  title={Structured consistency loss for semi-supervised semantic segmentation},
+  author={Kim, Jongmok and Jang, Jooyoung and Park, Hyunwoo},
+  journal={arXiv},
+  year={2020}
+}
+
+@article{dosovitskiy2020image,
+  title={An image is worth 16x16 words: Transformers for image recognition at scale},
+  author={Dosovitskiy, Alexey and Beyer, Lucas and Kolesnikov, Alexander and Weissenborn, Dirk and Zhai, Xiaohua and Unterthiner, Thomas and Dehghani, Mostafa and Minderer, Matthias and Heigold, Georg and Gelly, Sylvain and others},
+  journal={arXiv},
+  year={2020}
+}
+
+@article{devlin2018bert,
+  title={Bert: Pre-training of deep bidirectional transformers for language understanding},
+  author={Devlin, Jacob and Chang, Ming-Wei and Lee, Kenton and Toutanova, Kristina},
+  journal={arXiv},
+  year={2018}
+}
+
+@article{vincent2010stacked,
+  title={Stacked denoising autoencoders: Learning useful representations in a deep network with a local denoising criterion.},
+  author={Vincent, Pascal and Larochelle, Hugo and Lajoie, Isabelle and Bengio, Yoshua and Manzagol, Pierre-Antoine and Bottou, L{\'e}on},
+  journal={Journal of machine learning research},
+  volume={11},
+  number={12},
+  year={2010}
+}
+
+@inproceedings{pathak2016context,
+  title={Context encoders: Feature learning by inpainting},
+  author={Pathak, Deepak and Krahenbuhl, Philipp and Donahue, Jeff and Darrell, Trevor and Efros, Alexei A},
+  booktitle={CVPR},
+  pages={2536--2544},
+  year={2016}
+}
+
+@article{bao2021beit,
+  title={Beit: Bert pre-training of image transformers},
+  author={Bao, Hangbo and Dong, Li and Wei, Furu},
+  journal={arXiv},
+  year={2021}
+}
+
+@article{xie2021simmim,
+  title={Simmim: A simple framework for masked image modeling},
+  author={Xie, Zhenda and Zhang, Zheng and Cao, Yue and Lin, Yutong and Bao, Jianmin and Yao, Zhuliang and Dai, Qi and Hu, Han},
+  journal={arXiv},
+  year={2021}
+}
+
+@article{he2021masked,
+  title={Masked autoencoders are scalable vision learners},
+  author={He, Kaiming and Chen, Xinlei and Xie, Saining and Li, Yanghao and Doll{\'a}r, Piotr and Girshick, Ross},
+  journal={arXiv},
+  year={2021}
+}
+
+@article{tarvainen2017mean,
+  title={Mean teachers are better role models: Weight-averaged consistency targets improve semi-supervised deep learning results},
+  author={Tarvainen, Antti and Valpola, Harri},
+  journal={NIPS},
+  volume={30},
+  year={2017}
+}
+
+@article{berthelot2019mixmatch,
+  title={Mixmatch: A holistic approach to semi-supervised learning},
+  author={Berthelot, David and Carlini, Nicholas and Goodfellow, Ian and Papernot, Nicolas and Oliver, Avital and Raffel, Colin A},
+  journal={NIPS},
+  volume={32},
+  year={2019}
+}
+
+@inproceedings{kuo2020featmatch,
+  title={Featmatch: Feature-based augmentation for semi-supervised learning},
+  author={Kuo, Chia-Wen and Ma, Chih-Yao and Huang, Jia-Bin and Kira, Zsolt},
+  booktitle={ECCV},
+  pages={479--495},
+  year={2020},
+  organization={Springer}
+}
+
+@inproceedings{fu2018deep,
+  title={Deep ordinal regression network for monocular depth estimation},
+  author={Fu, Huan and Gong, Mingming and Wang, Chaohui and Batmanghelich, Kayhan and Tao, Dacheng},
+  booktitle={CVPR},
+  pages={2002--2011},
+  year={2018}
+}
+
+@article{lee2019big,
+  title={From big to small: Multi-scale local planar guidance for monocular depth estimation},
+  author={Lee, Jin Han and Han, Myung-Kyu and Ko, Dong Wook and Suh, Il Hong},
+  journal={arXiv},
+  year={2019}
+}
+
+@inproceedings{yang2021transformer,
+  title={Transformer-based attention networks for continuous pixel-wise prediction},
+  author={Yang, Guanglei and Tang, Hao and Ding, Mingli and Sebe, Nicu and Ricci, Elisa},
+  booktitle={ICCV},
+  pages={16269--16279},
+  year={2021}
+}
+
+@inproceedings{ranftl2021vision,
+  title={Vision transformers for dense prediction},
+  author={Ranftl, Ren{\'e} and Bochkovskiy, Alexey and Koltun, Vladlen},
+  booktitle={ICCV},
+  pages={12179--12188},
+  year={2021}
+}
+
+@inproceedings{xie2016deep3d,
+  title={Deep3d: Fully automatic 2d-to-3d video conversion with deep convolutional neural networks},
+  author={Xie, Junyuan and Girshick, Ross and Farhadi, Ali},
+  booktitle={ECCV},
+  pages={842--857},
+  year={2016},
+  organization={Springer}
+}
+
+@inproceedings{kuznietsov2017semi,
+  title={Semi-supervised deep learning for monocular depth map prediction},
+  author={Kuznietsov, Yevhen and Stuckler, Jorg and Leibe, Bastian},
+  booktitle={CVPR},
+  pages={6647--6655},
+  year={2017}
+}
+
+@inproceedings{laina2016deeper,
+  title={Deeper depth prediction with fully convolutional residual networks},
+  author={Laina, Iro and Rupprecht, Christian and Belagiannis, Vasileios and Tombari, Federico and Navab, Nassir},
+  booktitle={3DV},
+  pages={239--248},
+  year={2016},
+  organization={IEEE}
+}
+
+
+@article{kim2022global,
+  title={Global-Local Path Networks for Monocular Depth Estimation with Vertical CutDepth},
+  author={Kim, Doyeon and Ga, Woonghyun and Ahn, Pyungwhan and Joo, Donggyu and Chun, Sehwan and Kim, Junmo},
+  journal={arXiv},
+  year={2022}
+}
+
+@article{eigen2014depth,
+  title={Depth map prediction from a single image using a multi-scale deep network},
+  author={Eigen, David and Puhrsch, Christian and Fergus, Rob},
+  journal={NIPS},
+  volume={27},
+  year={2014}
+}
+
+@inproceedings{eigen2015predicting,
+  title={Predicting depth, surface normals and semantic labels with a common multi-scale convolutional architecture},
+  author={Eigen, David and Fergus, Rob},
+  booktitle={CVPR},
+  pages={2650--2658},
+  year={2015}
+}
+
+@article{liu2015learning,
+  title={Learning depth from single monocular images using deep convolutional neural fields},
+  author={Liu, Fayao and Shen, Chunhua and Lin, Guosheng and Reid, Ian},
+  journal={PAMI},
+  volume={38},
+  number={10},
+  pages={2024--2039},
+  year={2015},
+  publisher={IEEE}
+}
+
+@article{yuan2022new,
+  title={NeW CRFs: Neural Window Fully-connected CRFs for Monocular Depth Estimation},
+  author={Yuan, Weihao and Gu, Xiaodong and Dai, Zuozhuo and Zhu, Siyu and Tan, Ping},
+  journal={arXiv},
+  year={2022}
+}
+
+@inproceedings{roy2016monocular,
+  title={Monocular depth estimation using neural regression forest},
+  author={Roy, Anirban and Todorovic, Sinisa},
+  booktitle={CVPR},
+  pages={5506--5514},
+  year={2016}
+}
+
+@article{ricci2018monocular,
+  title={Monocular depth estimation using multi-scale continuous crfs as sequential deep networks},
+  author={Ricci, Elisa and Ouyang, Wanli and Wang, Xiaogang and Sebe, Nicu and others},
+  journal={PAMI},
+  volume={41},
+  number={6},
+  pages={1426--1440},
+  year={2018},
+  publisher={IEEE}
+}
+
+@article{vaswani2017attention,
+  title={Attention is all you need},
+  author={Vaswani, Ashish and Shazeer, Noam and Parmar, Niki and Uszkoreit, Jakob and Jones, Llion and Gomez, Aidan N and Kaiser, {\L}ukasz and Polosukhin, Illia},
+  journal={NIPS},
+  volume={30},
+  year={2017}
+}
+
+@article{li2022depthformer,
+  title={DepthFormer: Exploiting Long-Range Correlation and Local Information for Accurate Monocular Depth Estimation},
+  author={Li, Zhenyu and Chen, Zehui and Liu, Xianming and Jiang, Junjun},
+  journal={arXiv},
+  year={2022}
+}
+
+@inproceedings{li2015depth,
+  title={Depth and surface normal estimation from monocular images using regression on deep features and hierarchical crfs},
+  author={Li, Bo and Shen, Chunhua and Dai, Yuchao and Van Den Hengel, Anton and He, Mingyi},
+  booktitle={CVPR},
+  pages={1119--1127},
+  year={2015}
+}
+
+@inproceedings{wang2015designing,
+  title={Designing deep networks for surface normal estimation},
+  author={Wang, Xiaolong and Fouhey, David and Gupta, Abhinav},
+  booktitle={CVPR},
+  pages={539--547},
+  year={2015}
+}
+
+@inproceedings{kim2016,
+  title={Unified Depth Prediction and Intrinsic Image Decomposition from a Single Image via Joint Convolutional Neural Fields},
+  author={Kim, Seungryong and Park, Kihong and Sohn, Kwanghoon and Lin, Stephen},
+  booktitle={ECCV},
+  pages={143--159},
+  year={2016}
+}
+
+@inproceedings{ummenhofer2017demon,
+  title={Demon: Depth and motion network for learning monocular stereo},
+  author={Ummenhofer, Benjamin and Zhou, Huizhong and Uhrig, Jonas and Mayer, Nikolaus and Ilg, Eddy and Dosovitskiy, Alexey and Brox, Thomas},
+  booktitle={CVPR},
+  pages={5038--5047},
+  year={2017}
+}
+
+
+@inproceedings{choi2021adaptive,
+  title={Adaptive confidence thresholding for monocular depth estimation},
+  author={Choi, Hyesong and Lee, Hunsang and Kim, Sunkyung and Kim, Sunok and Kim, Seungryong and Sohn, Kwanghoon and Min, Dongbo},
+  booktitle={ICCV},
+  pages={12808--12818},
+  year={2021}
+}
+
+@article{paszke2017automatic,
+  title={Automatic differentiation in pytorch},
+  author={Paszke, Adam and Gross, Sam and Chintala, Soumith and Chanan, Gregory and Yang, Edward and DeVito, Zachary and Lin, Zeming and Desmaison, Alban and Antiga, Luca and Lerer, Adam},
+  year={2017}
+}
+
+@inproceedings{dwibedi2017cut,
+  title={Cut, paste and learn: Surprisingly easy synthesis for instance detection},
+  author={Dwibedi, Debidatta and Misra, Ishan and Hebert, Martial},
+  booktitle={ICCV},
+  pages={1301--1310},
+  year={2017}
+}
+
+@inproceedings{ghiasi2021simple,
+  title={Simple copy-paste is a strong data augmentation method for instance segmentation},
+  author={Ghiasi, Golnaz and Cui, Yin and Srinivas, Aravind and Qian, Rui and Lin, Tsung-Yi and Cubuk, Ekin D and Le, Quoc V and Zoph, Barret},
+  booktitle={CVPR},
+  pages={2918--2928},
+  year={2021}
+}
+
+@inproceedings{garg2016unsupervised,
+  title={Unsupervised CNN for single view depth estimation: Geometry to the rescue},
+  author={Garg, Ravi and Kumar, BG Vijay and Carneiro, Gustavo and Reid, Ian},
+  booktitle={ECCV},
+  pages={740--756},
+  year={2016},
+  organization={Springer}
+}
+
+@article{li2022binsformer,
+  title={BinsFormer: Revisiting Adaptive Bins for Monocular Depth Estimation},
+  author={Li, Zhenyu and Wang, Xuyang and Liu, Xianming and Jiang, Junjun},
+  journal={arXiv},
+  year={2022}
+}
+
+@inproceedings{godard2017unsupervised,
+  title={Unsupervised monocular depth estimation with left-right consistency},
+  author={Godard, Cl{\'e}ment and Mac Aodha, Oisin and Brostow, Gabriel J},
+  booktitle={CVPR},
+  pages={270--279},
+  year={2017}
+}
+
+@inproceedings{luo2018single,
+  title={Single view stereo matching},
+  author={Luo, Yue and Ren, Jimmy and Lin, Mude and Pang, Jiahao and Sun, Wenxiu and Li, Hongsheng and Lin, Liang},
+  booktitle={CVPR},
+  pages={155--163},
+  year={2018}
+}
+
+@InProceedings{godard2019digging,
+  author={Godard, Cl{\'e}ment and Mac Aodha, Oisin and Firman, Michael and Brostow, Gabriel J},
+  title={Digging into self-supervised monocular depth estimation},
+  booktitle={ICCV},
+  year={2019},
+  pages={3828--3838}
+}
+
+@article{miyato2018virtual,
+  title={Virtual adversarial training: a regularization method for supervised and semi-supervised learning},
+  author={Miyato, Takeru and Maeda, Shin-ichi and Koyama, Masanori and Ishii, Shin},
+  journal={PAMI},
+  volume={41},
+  number={8},
+  pages={1979--1993},
+  year={2018},
+  publisher={IEEE}
+}
+
+@article{mackay1992practical,
+  title={A practical Bayesian framework for backpropagation networks},
+  author={MacKay, David JC},
+  journal={Neural computation},
+  volume={4},
+  number={3},
+  pages={448--472},
+  year={1992},
+  publisher={MIT Press One Rogers Street, Cambridge, MA 02142-1209, USA journals-info~…}
+}
+
+
+@inproceedings{welling2011bayesian,
+  title={Bayesian learning via stochastic gradient Langevin dynamics},
+  author={Welling, Max and Teh, Yee W},
+  booktitle={ICML},
+  pages={681--688},
+  year={2011},
+  organization={Citeseer}
+}
+
+
+@inproceedings{pilzer2019refine,
+  title={Refine and distill: Exploiting cycle-inconsistency and knowledge distillation for unsupervised monocular depth estimation},
+  author={Pilzer, Andrea and Lathuiliere, Stephane and Sebe, Nicu and Ricci, Elisa},
+  booktitle={CVPR},
+  pages={9768--9777},
+  year={2019}
+}
+
+@inproceedings{watson2019self,
+  title={Self-supervised monocular depth hints},
+  author={Watson, Jamie and Firman, Michael and Brostow, Gabriel J and Turmukhambetov, Daniyar},
+  booktitle={ICCV},
+  pages={2162--2171},
+  year={2019}
+}
+
+@inproceedings{zhou2017unsupervised,
+  title={Unsupervised learning of depth and ego-motion from video},
+  author={Zhou, Tinghui and Brown, Matthew and Snavely, Noah and Lowe, David G},
+  booktitle={CVPR},
+  pages={1851--1858},
+  year={2017}
+}
+
+@article{gal2016uncertainty,
+  title={Uncertainty in deep learning},
+  author={Gal, Yarin and others},
+  year={2016},
+  publisher={PhD thesis, University of Cambridge}
+}
+
+@inproceedings{yin2018geonet,
+  title={Geonet: Unsupervised learning of dense depth, optical flow and camera pose},
+  author={Yin, Zhichao and Shi, Jianping},
+  booktitle={CVPR},
+  pages={1983--1992},
+  year={2018}
+}
+
+@inproceedings{chen2019towards,
+  title={Towards scene understanding: Unsupervised monocular depth estimation with semantic-aware representation},
+  author={Chen, Po-Yi and Liu, Alexander H and Liu, Yen-Cheng and Wang, Yu-Chiang Frank},
+  booktitle={CVPR},
+  pages={2624--2632},
+  year={2019}
+}
+
+@article{der2009aleatory,
+  title={Aleatory or epistemic? Does it matter?},
+  author={Der Kiureghian, Armen and Ditlevsen, Ove},
+  journal={Structural safety},
+  volume={31},
+  number={2},
+  pages={105--112},
+  year={2009},
+  publisher={Elsevier}
+}
+
+@article{kendall2017uncertainties,
+  title={What uncertainties do we need in bayesian deep learning for computer vision?},
+  author={Kendall, Alex and Gal, Yarin},
+  journal={NIPS},
+  volume={30},
+  year={2017}
+}
+
+@inproceedings{amiri2019semi,
+  title={Semi-supervised monocular depth estimation with left-right consistency using deep neural network},
+  author={Amiri, Ali Jahani and Loo, Shing Yan and Zhang, Hong},
+  booktitle={ROBIO},
+  pages={602--607},
+  year={2019}
+}
+
+@inproceedings{poggi2020uncertainty,
+  title={On the uncertainty of self-supervised monocular depth estimation},
+  author={Poggi, Matteo and Aleotti, Filippo and Tosi, Fabio and Mattoccia, Stefano},
+  booktitle={CVPR},
+  pages={3227--3237},
+  year={2020}
+}
+
+@article{alvarez2019self,
+  title={Self-supervised blur detection from synthetically blurred scenes},
+  author={Alvarez-Gila, Aitor and Galdran, Adrian and Garrote, Estibaliz and Van de Weijer, Joost},
+  journal={Image and Vision Computing},
+  volume={92},
+  pages={103804},
+  year={2019},
+  publisher={Elsevier}
+}
+
+@inproceedings{guo2018learning,
+  title={Learning monocular depth by distilling cross-domain stereo networks},
+  author={Guo, Xiaoyang and Li, Hongsheng and Yi, Shuai and Ren, Jimmy and Wang, Xiaogang},
+  booktitle={ECCV},
+  pages={484--500},
+  year={2018}
+}
+
+@article{tonioni2019unsupervised,
+  title={Unsupervised domain adaptation for depth prediction from images},
+  author={Tonioni, Alessio and Poggi, Matteo and Mattoccia, Stefano and Di Stefano, Luigi},
+  journal={PAMI},
+  volume={42},
+  number={10},
+  pages={2396--2409},
+  year={2019},
+  publisher={IEEE}
+}
+
+@article{cho2019large,
+  title={A large RGB-D dataset for semi-supervised monocular depth estimation},
+  author={Cho, Jaehoon and Min, Dongbo and Kim, Youngjung and Sohn, Kwanghoon},
+  journal={arXiv},
+  year={2019}
+}
+
+@inproceedings{chen2021exploring,
+  title={Exploring simple siamese representation learning},
+  author={Chen, Xinlei and He, Kaiming},
+  booktitle={CVPR},
+  pages={15750--15758},
+  year={2021}
+}
+
+@book{kullback1997information,
+  title={Information theory and statistics},
+  author={Kullback, Solomon},
+  year={1997},
+  publisher={Courier Corporation}
+}
+
+@article{devries2017improved,
+  title={Improved regularization of convolutional neural networks with cutout},
+  author={DeVries, Terrance and Taylor, Graham W},
+  journal={arXiv},
+  year={2017}
+}
+
+@article{wang2009mean,
+  title={Mean squared error: Love it or leave it? A new look at signal fidelity measures},
+  author={Wang, Zhou and Bovik, Alan C},
+  journal={IEEE signal processing magazine},
+  volume={26},
+  number={1},
+  pages={98--117},
+  year={2009},
+  publisher={IEEE}
+}
+
+@inproceedings{ronneberger2015u,
+  title={U-net: Convolutional networks for biomedical image segmentation},
+  author={Ronneberger, Olaf and Fischer, Philipp and Brox, Thomas},
+  booktitle={MICCAI},
+  pages={234--241},
+  year={2015},
+  organization={Springer}
+}
+
+@inproceedings{silberman2012indoor,
+  title={Indoor segmentation and support inference from rgbd images},
+  author={Silberman, Nathan and Hoiem, Derek and Kohli, Pushmeet and Fergus, Rob},
+  booktitle={ECCV},
+  pages={746--760},
+  year={2012},
+  organization={Springer}
+}
+
+@article{gidaris2018unsupervised,
+  title={Unsupervised representation learning by predicting image rotations},
+  author={Gidaris, Spyros and Singh, Praveer and Komodakis, Nikos},
+  journal={arXiv},
+  year={2018}
+}
+
+@inproceedings{taylor2018improving,
+  title={Improving deep learning with generic data augmentation},
+  author={Taylor, Luke and Nitschke, Geoff},
+  booktitle={SSCI},
+  pages={1542--1547},
+  year={2018},
+  organization={IEEE}
+}
+
+@article{ishii2021cutdepth,
+  title={CutDepth: Edge-aware Data Augmentation in Depth Estimation},
+  author={Ishii, Yasunori and Yamashita, Takayoshi},
+  journal={arXiv},
+  year={2021}
+}
+
+@inproceedings{peng2021excavating,
+  title={Excavating the Potential Capacity of Self-Supervised Monocular Depth Estimation},
+  author={Peng, Rui and Wang, Ronggang and Lai, Yawen and Tang, Luyang and Cai, Yangang},
+  booktitle={ICCV},
+  pages={15560--15569},
+  year={2021}
+}
+
+@article{bachmann2022multimae,
+  title={MultiMAE: Multi-modal Multi-task Masked Autoencoders},
+  author={Bachmann, Roman and Mizrahi, David and Atanov, Andrei and Zamir, Amir},
+  journal={arXiv},
+  year={2022}
+}
+
+@inproceedings{geiger2012we,
+  title={Are we ready for autonomous driving? the kitti vision benchmark suite},
+  author={Geiger, Andreas and Lenz, Philip and Urtasun, Raquel},
+  booktitle={CVPR},
+  pages={3354--3361},
+  year={2012},
+  organization={IEEE}
+}
+
+@inproceedings{uhrig2017sparsity,
+  title={Sparsity invariant cnns},
+  author={Uhrig, Jonas and Schneider, Nick and Schneider, Lukas and Franke, Uwe and Brox, Thomas and Geiger, Andreas},
+  booktitle={3DV},
+  pages={11--20},
+  year={2017},
+  organization={IEEE}
+}
+
+@article{grill2020bootstrap,
+  title={Bootstrap your own latent-a new approach to self-supervised learning},
+  author={Grill, Jean-Bastien and Strub, Florian and Altch{\'e}, Florent and Tallec, Corentin and Richemond, Pierre and Buchatskaya, Elena and Doersch, Carl and Avila Pires, Bernardo and Guo, Zhaohan and Gheshlaghi Azar, Mohammad and others},
+  journal={NIPS},
+  volume={33},
+  pages={21271--21284},
+  year={2020}
+}
+
+@inproceedings{deng2009imagenet,
+  title={Imagenet: A large-scale hierarchical image database},
+  author={Deng, Jia and Dong, Wei and Socher, Richard and Li, Li-Jia and Li, Kai and Fei-Fei, Li},
+  booktitle={CVPR},
+  pages={248--255},
+  year={2009},
+  organization={Ieee}
+}
+
+@inproceedings{kumar2020fisheyedistancenet,
+  title={Fisheyedistancenet: Self-supervised scale-aware distance estimation using monocular fisheye camera for autonomous driving},
+  author={Kumar, Varun Ravi and Hiremath, Sandesh Athni and Bach, Markus and Milz, Stefan and Witt, Christian and Pinard, Cl{\'e}ment and Yogamani, Senthil and M{\"a}der, Patrick},
+  booktitle={ICRA},
+  pages={574--581},
+  year={2020},
+  organization={IEEE}
+}
+
+@inproceedings{yogamani2019woodscape,
+  title={Woodscape: A multi-task, multi-camera fisheye dataset for autonomous driving},
+  author={Yogamani, Senthil and Hughes, Ciar{\'a}n and Horgan, Jonathan and Sistu, Ganesh and Varley, Padraig and O'Dea, Derek and Uric{\'a}r, Michal and Milz, Stefan and Simon, Martin and Amende, Karl and others},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  pages={9308--9318},
+  year={2019}
+}
+
+@inproceedings{lee2011depth,
+  title={Depth-assisted real-time 3D object detection for augmented reality},
+  author={Lee, Wonwoo and Park, Nohyoung and Woo, Woontack},
+  booktitle={ICAT},
+  volume={11},
+  number={2},
+  pages={126--132},
+  year={2011}
+}
+
+@inproceedings{huang20176,
+  title={6-DOF VR videos with a single 360-camera},
+  author={Huang, Jingwei and Chen, Zhili and Ceylan, Duygu and Jin, Hailin},
+  booktitle={VR},
+  pages={37--44},
+  year={2017},
+  organization={IEEE}
+}
+
+@article{saxena20083,
+  title={3-d depth reconstruction from a single still image},
+  author={Saxena, Ashutosh and Chung, Sung H and Ng, Andrew Y},
+  journal={IJCV},
+  volume={76},
+  number={1},
+  pages={53--69},
+  year={2008},
+  publisher={Springer}
+}
+
+@inproceedings{ladicky2014pulling,
+  title={Pulling things out of perspective},
+  author={Ladicky, Lubor and Shi, Jianbo and Pollefeys, Marc},
+  booktitle={CVPR},
+  pages={89--96},
+  year={2014}
+}
+
+@inproceedings{tosi2019learning,
+  title={Learning monocular depth estimation infusing traditional stereo knowledge},
+  author={Tosi, Fabio and Aleotti, Filippo and Poggi, Matteo and Mattoccia, Stefano},
+  booktitle={CVPR},
+  pages={9799--9809},
+  year={2019}
+}
+
+@article{lee2021learning,
+  title={Learning time-critical responses for interactive character control},
+  author={Lee, Kyungho and Min, Sehee and Lee, Sunmin and Lee, Jehee},
+  journal={TOG},
+  volume={40},
+  number={4},
+  pages={1--11},
+  year={2021},
+  publisher={ACM New York, NY, USA}
+}
+
+@inproceedings{guizilini20203d,
+  title={3d packing for self-supervised monocular depth estimation},
+  author={Guizilini, Vitor and Ambrus, Rares and Pillai, Sudeep and Raventos, Allan and Gaidon, Adrien},
+  booktitle={CVPR},
+  pages={2485--2494},
+  year={2020}
+}
+
+@inproceedings{angelova2019onboarddepth,
+  title={Onboarddepth: Depth prediction for onboard systems},
+  author={Angelova, Anelia and Yamparala, Devesh and Vincent, Justin and Leger, Chris},
+  booktitle={ECMR},
+  pages={1--8},
+  year={2019},
+  organization={IEEE}
+}
+
+@inproceedings{mayer2016large,
+  title={A large dataset to train convolutional networks for disparity, optical flow, and scene flow estimation},
+  author={Mayer, Nikolaus and Ilg, Eddy and Hausser, Philip and Fischer, Philipp and Cremers, Daniel and Dosovitskiy, Alexey and Brox, Thomas},
+  booktitle={CVPR},
+  pages={4040--4048},
+  year={2016}
+}
+
+@inproceedings{bhat2021adabins,
+  title={Adabins: Depth estimation using adaptive bins},
+  author={Bhat, Shariq Farooq and Alhashim, Ibraheem and Wonka, Peter},
+  booktitle={CVPR},
+  pages={4009--4018},
+  year={2021}
+}
+
+@inproceedings{guizilini2020robust,
+  title={Robust semi-supervised monocular depth estimation with reprojected distances},
+  author={Guizilini, Vitor and Li, Jie and Ambrus, Rares and Pillai, Sudeep and Gaidon, Adrien},
+  booktitle={Conference on robot learning},
+  pages={503--512},
+  year={2020},
+  organization={PMLR}
+}
+
+@article{zhang2022does,
+  title={How Does SimSiam Avoid Collapse Without Negative Samples? A Unified Understanding with Self-supervised Contrastive Learning},
+  author={Zhang, Chaoning and Zhang, Kang and Zhang, Chenshuang and Pham, Trung X and Yoo, Chang D and Kweon, In So},
+  journal={arXiv},
+  year={2022}
+}
+
+@article{ranftl2020towards,
+  title={Towards robust monocular depth estimation: Mixing datasets for zero-shot cross-dataset transfer},
+  author={Ranftl, Ren{\'e} and Lasinger, Katrin and Hafner, David and Schindler, Konrad and Koltun, Vladlen},
+  journal={PAMI},
+  year={2020},
+  publisher={IEEE}
+}
+
+@inproceedings{cordts2016cityscapes,
+  title={The cityscapes dataset for semantic urban scene understanding},
+  author={Cordts, Marius and Omran, Mohamed and Ramos, Sebastian and Rehfeld, Timo and Enzweiler, Markus and Benenson, Rodrigo and Franke, Uwe and Roth, Stefan and Schiele, Bernt},
+  booktitle={CVPR},
+  pages={3213--3223},
+  year={2016}
+}
+
+@inproceedings{melas2021pixmatch,
+  title={PixMatch: Unsupervised domain adaptation via pixelwise consistency training},
+  author={Melas-Kyriazi, Luke and Manrai, Arjun K},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={12435--12445},
+  year={2021}
+}
+
+@inproceedings{kundu2018adadepth,
+  title={Adadepth: Unsupervised content congruent adaptation for depth estimation},
+  author={Kundu, Jogendra Nath and Uppala, Phani Krishna and Pahuja, Anuj and Babu, R Venkatesh},
+  booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},
+  pages={2656--2665},
+  year={2018}
+}
+
+@inproceedings{zheng2018t2net,
+  title={T2net: Synthetic-to-realistic translation for solving single-image depth estimation tasks},
+  author={Zheng, Chuanxia and Cham, Tat-Jen and Cai, Jianfei},
+  booktitle={Proceedings of the European Conference on Computer Vision (ECCV)},
+  pages={767--783},
+  year={2018}
+}
+
+@inproceedings{zhao2019geometry,
+  title={Geometry-aware symmetric domain adaptation for monocular depth estimation},
+  author={Zhao, Shanshan and Fu, Huan and Gong, Mingming and Tao, Dacheng},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={9788--9798},
+  year={2019}
+}
+
+@inproceedings{pnvr2020sharingan,
+  title={Sharingan: Combining synthetic and real data for unsupervised geometry estimation},
+  author={PNVR, Koutilya and Zhou, Hao and Jacobs, David},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={13974--13983},
+  year={2020}
+}
+
+@inproceedings{gaidon2016virtual,
+  title={Virtual worlds as proxy for multi-object tracking analysis},
+  author={Gaidon, Adrien and Wang, Qiao and Cabon, Yohann and Vig, Eleonora},
+  booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},
+  pages={4340--4349},
+  year={2016}
+}
+
+@inproceedings{watson2021temporal,
+  title={The temporal opportunist: Self-supervised multi-frame monocular depth},
+  author={Watson, Jamie and Mac Aodha, Oisin and Prisacariu, Victor and Brostow, Gabriel and Firman, Michael},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={1164--1174},
+  year={2021}
+}
+
+@article{feng2022disentangling,
+  title={Disentangling Object Motion and Occlusion for Unsupervised Multi-frame Monocular Depth},
+  author={Feng, Ziyue and Yang, Liang and Jing, Longlong and Wang, Haiyan and Tian, YingLi and Li, Bing},
+  journal={arXiv preprint arXiv:2203.15174},
+  year={2022}
+}
+
+@article{zhou2021ibot,
+  title={ibot: Image bert pre-training with online tokenizer},
+  author={Zhou, Jinghao and Wei, Chen and Wang, Huiyu and Shen, Wei and Xie, Cihang and Yuille, Alan and Kong, Tao},
+  journal={arXiv preprint arXiv:2111.07832},
+  year={2021}
+}
+
+@article{xu2022masked,
+  title={Masked Autoencoders are Robust Data Augmentors},
+  author={Xu, Haohang and Ding, Shuangrui and Zhang, Xiaopeng and Xiong, Hongkai and Tian, Qi},
+  journal={arXiv preprint arXiv:2206.04846},
+  year={2022}
+}
+
+@article{bian2019unsupervised,
+  title={Unsupervised scale-consistent depth and ego-motion learning from monocular video},
+  author={Bian, Jiawang and Li, Zhichao and Wang, Naiyan and Zhan, Huangying and Shen, Chunhua and Cheng, Ming-Ming and Reid, Ian},
+  journal={Advances in neural information processing systems},
+  volume={32},
+  year={2019}
+}
+
+@inproceedings{wang2018learning,
+  title={Learning depth from monocular videos using direct methods},
+  author={Wang, Chaoyang and Buenaposada, Jos{\'e} Miguel and Zhu, Rui and Lucey, Simon},
+  booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},
+  pages={2022--2030},
+  year={2018}
+}
+
+@inproceedings{wang2021can,
+  title={Can Scale-Consistent Monocular Depth Be Learned in a Self-Supervised Scale-Invariant Manner?},
+  author={Wang, Lijun and Wang, Yifan and Wang, Linzhao and Zhan, Yunlong and Wang, Ying and Lu, Huchuan},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  pages={12727--12736},
+  year={2021}
+}
+
+@inproceedings{song2015sun,
+  title={Sun rgb-d: A rgb-d scene understanding benchmark suite},
+  author={Song, Shuran and Lichtenberg, Samuel P and Xiao, Jianxiong},
+  booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},
+  pages={567--576},
+  year={2015}
+}
+
+@article{bhoi2019monocular,
+  title={Monocular depth estimation: A survey},
+  author={Bhoi, Amlaan},
+  journal={arXiv preprint arXiv:1901.09402},
+  year={2019}
 }
