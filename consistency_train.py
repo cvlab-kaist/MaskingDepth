@@ -81,7 +81,7 @@ if __name__ == "__main__":
                 
         step = 0
         print('Start Training')
-        train_iter_len = (len(labeled_loader)  if len(labeled_loader) > len(unlabeled_loader) else len(unlabeled_loader)) // train_cfg.unlabel_ratio
+        train_iter_len = (len(labeled_loader)  if len(labeled_loader) > len(unlabeled_loader) else len(unlabeled_loader))
         labeled_iter = iter(labeled_loader)
         unlabeled_iter = iter(unlabeled_loader)
 
@@ -142,8 +142,7 @@ if __name__ == "__main__":
                     total_loss = 0
                     losses = {}
 
-                    with torch.cuda.amp.autocast(enabled=True):
-                        total_loss, _, pred_depth, pred_uncert, pred_depth_mask = loss.compute_loss(inputs, model, train_cfg, EVAL)
+                    total_loss, _, pred_depth, pred_uncert, pred_depth_mask = loss.compute_loss(inputs, model, train_cfg, EVAL)
                         
                     gt_depth = inputs['depth_gt']
                     

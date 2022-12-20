@@ -3,7 +3,7 @@ Train:
   model_name: 'MODEL_NAME'
   log_path: './log'
   use_cuda: True
-  seed: 42
+  seed: 41
   start_epoch: 0
   end_epoch: 50
   batch_size: 4
@@ -33,6 +33,6 @@ Train:
     height: 192
     width: 640
     dataset: 'kitti_depth'
-    splits: 'eigen_full'
-    data_path: '/root/data1/KITTI'
+    splits: 'eigen_temp'
+    data_path: 'DATA_PATH'
     img_ext: '.jpg'

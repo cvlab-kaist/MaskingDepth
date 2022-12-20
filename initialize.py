@@ -21,7 +21,7 @@ def seed_everything(seed=42):
     os.environ['PYTHONHASHSEED'] = str(seed)
     torch.manual_seed(seed)
     torch.cuda.manual_seed(seed)
-    torch.cuda.manual_seed_all(random_seed) # if use multi-GPU
+    torch.cuda.manual_seed_all(seed) # if use multi-GPU
     torch.backends.cudnn.deterministic = True
     torch.backends.cudnn.benchmark = False
     print(f"seed : {seed}")
@@ -42,7 +42,7 @@ def baseline_model_load(model_cfg, device):
                         depth = 12,
                         heads = 12,
                         mlp_dim = 3072)
-        v.resize_pos_embed(480,640)
+        v.resize_pos_embed(192,640)
 
         model['depth'] = networks.Masked_DPT(encoder=v,
                         max_depth = model_cfg.max_depth,

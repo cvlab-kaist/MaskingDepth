@@ -1,6 +1,6 @@
 import torch
 import torch.nn.functional as F
-
+import torchvision 
 import utils
 
 TRAIN   = 0
@@ -12,7 +12,7 @@ def compute_loss(inputs, model, train_cfg, mode = TRAIN):
     total_loss = 0
 
     pred_depth, full_features, fusion_features = model_forward(inputs['color'], model)
-    
+
     ### compute supervised loss 
     if train_cfg.data.dataset in ['nyu'] or train_cfg.unlabeled_data.dataset in ['nyu']:
         losses['sup_loss'] = compute_sup_loss(pred_depth, inputs['depth_gt'])
@@ -36,7 +36,7 @@ def compute_loss(inputs, model, train_cfg, mode = TRAIN):
     if not(train_cfg.d_consistency == 0) or not(train_cfg.f_consistency == 0):
         
         #### make K-way augmented depth map
-        pred_depth_mask, mask_features, _, = model_forward(inputs['color_aug'], model, crop, K = train_cfg.K)
+        pred_depth_mask, mask_features, _, = model_forward(inputs['color_aug'], model, K = train_cfg.K)
 
         if not(train_cfg.data.dataset == 'nyu' or train_cfg.unlabeled_data.dataset == 'nyu'):
             pred_depth_mask = F.interpolate(pred_depth_mask, inputs['depth_gt'].shape[-2:], mode="bilinear", align_corners = False)
@@ -49,7 +49,7 @@ def compute_loss(inputs, model, train_cfg, mode = TRAIN):
         
     else:
         if mode == EVAL:
-            pred_depth_mask, _, _ = model_forward(inputs['color_aug'], model, crop, K = train_cfg.K)
+            pred_depth_mask, _, _ = model_forward(inputs['color_aug'], model, K = train_cfg.K)
         else:
             pred_depth_mask = None
 
@@ -68,9 +68,7 @@ def compute_semi_loss(label, unlabel, model, train_cfg, mode = TRAIN):
     losses = {}
     total_loss = 0
     
-    
     label_pred_depth, label_full_features, label_fusion_features = model_forward(label['color'], model)
-
 
     if train_cfg.dataset == 'nyu':
         losses['sup_loss'] = compute_sup_loss(label_pred_depth, label['depth_gt'])
@@ -89,7 +87,7 @@ def compute_semi_loss(label, unlabel, model, train_cfg, mode = TRAIN):
     if not(train_cfg.d_consistency == 0) or not(train_cfg.f_consistency == 0) or (train_cfg.self_sup==True):
         unlabel_pred_depth, unlabel_full_features, unlabel_fusion_features = model_forward(unlabel['color'], model)
         unlabel_pred_uncert = uncert_forward(unlabel_fusion_features, model) if 'uncert_decoder' in model.keys() else None
-
+        
         unlabel_pred_depth_mask, unlabel_mask_features, _ = model_forward(unlabel['color_aug'], model, train_cfg.K)
 
         if not(train_cfg.d_consistency == 0):
@@ -115,7 +113,7 @@ def compute_semi_loss(label, unlabel, model, train_cfg, mode = TRAIN):
 ############################################################################## 
 
 # main network forward
-def model_forward(inputs, model, K=0.0):  
+def model_forward(inputs, model, K=1):  
     pred_depth, features, fusion_features = model['depth'](inputs, K)
     return pred_depth, features, fusion_features
 

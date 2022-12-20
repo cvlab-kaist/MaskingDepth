@@ -110,9 +110,10 @@ class MonoDataset(data.Dataset):
         
         #weak aug
         if do_weak:
-            weak_aug = transforms.ColorJitter.get_params(
+            weak_aug = transforms.ColorJitter(
                             self.brightness, self.contrast, self.saturation, self.hue)
             inputs["color"] = self.to_tensor(self.resize(weak_aug(inputs["color"])))
+            torchvision.utils.save_image(inputs["color"], "./aaa.png")
         else:
             inputs["color"] = self.to_tensor(self.resize(inputs["color"]))
                         
