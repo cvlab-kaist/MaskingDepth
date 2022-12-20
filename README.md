@@ -1,1 +1,2 @@
-# K-way-masking-depth
+# MaskingDepth
+[[Project Page]](https://ku-cvlab.github.io/MaskingDepth/ "Project Page")
