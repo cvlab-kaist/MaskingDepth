@@ -67,7 +67,7 @@ if __name__ == "__main__":
                                                                                      train_cfg.batch_size, train_cfg.num_workers)
         # set wandb
         if train_cfg.wandb:
-            wandb.init(project = "MAE-depth",
+            wandb.init(project = "MaskingDepth",
                         name = train_cfg.model_name,
                         config = conf)
          # save configuration (this part activated when do not use wandb)
