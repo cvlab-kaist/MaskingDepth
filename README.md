@@ -10,13 +10,13 @@ Semi-supervised learning (SSL) has been successful in using both labeled and unl
 
 ## Environment
 * [NGC pytorch 20.11-py3](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/pytorch/tags) (Docker container)  
-* additional require packages(dotmap, wandb, einops, timm)
+* additional require packages (dotmap, wandb, einops, timm)
 * NVIDIA RGX 3090s
 
 In docker container
 ```
 git clone https://github.com/KU-CVLAB/MaskingDepth.git
-sh package_install.sh # install additionally package 
+sh package_install.sh                                    # install additionally package 
 ```
 
 ## Dataset
