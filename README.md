@@ -9,7 +9,7 @@ This code is the implementation of the paper <a href="https://arxiv.org/abs/2212
 Semi-supervised learning (SSL) has been successful in using both labeled and unlabeled data to improve performance. Depth maps, which are used to estimate the distance of objects in a scene, are more expensive to obtain and refine compared to other types of annotations such as image class labels and segmentation labels. Therefore, SSL techniques may be useful for monocular depth estimation, which involves using a single image to estimate depth. However there has not yet been an attempt to apply SSL approaches for monocular depth estimation. Following the successful achievements we first introduce consistency regularization between two differently augmented views from the same image to train the monocular depth estimation network.
 
 ## Environment
-* [NGC pytorch 20.11-py3](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/pytorch/tags) (Docker ontainder)  
+* [NGC pytorch 20.11-py3](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/pytorch/tags) (Docker container)  
 * additional require packages(dotmap, wandb, einops, timm)
 * NVIDIA RGX 3090s
 
