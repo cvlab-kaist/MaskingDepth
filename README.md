@@ -1,6 +1,6 @@
 # MaskingDepth
 [[Project Page]](https://ku-cvlab.github.io/MaskingDepth/ "Project Page")
-[[Paper]](https://arxiv.org/abs/2210.00939)
+[[Paper]](https://arxiv.org/abs/2212.10806)
 
 This code is the implementation of the paper <a href="https://arxiv.org/abs/2212.10806">Semi-Supervised Learning of Monocular Depth Estimation via Consistency Regularization with K-way Disjoint Masking</a> by Baek et al. 
 
