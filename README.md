@@ -15,8 +15,9 @@ Semi-supervised learning (SSL) has been successful in using both labeled and unl
 
 In docker container
 ```
-git clone https://github.com/KU-CVLAB/MaskingDepth.git
-sh package_install.sh                                    # install additionally package 
+git clone https://github.com/KU-CVLAB/MaskingDepth.git   # Download this project
+cd MaskingDepth                                          # Change directory
+sh package_install.sh                                    # Install additionally package 
 ```
 
 ## Dataset
