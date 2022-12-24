@@ -4,6 +4,8 @@
 
 This code is the implementation of the paper <a href="https://arxiv.org/abs/2212.10806">Semi-Supervised Learning of Monocular Depth Estimation via Consistency Regularization with K-way Disjoint Masking</a> by Baek et al. 
 
+![image](https://ku-cvlab.github.io/MaskingDepth/resources/overview.png)
+
 Semi-supervised learning (SSL) has been successful in using both labeled and unlabeled data to improve performance. Depth maps, which are used to estimate the distance of objects in a scene, are more expensive to obtain and refine compared to other types of annotations such as image class labels and segmentation labels. Therefore, SSL techniques may be useful for monocular depth estimation, which involves using a single image to estimate depth. However there has not yet been an attempt to apply SSL approaches for monocular depth estimation. Following the successful achievements we first introduce consistency regularization between two differently augmented views from the same image to train the monocular depth estimation network.
 
 ## Environment
@@ -43,6 +45,8 @@ We evaluate through the [eval_with_pngs.py](https://raw.githubusercontent.com/co
 # Results
 
 **Quantitative results on the KITTI dataset in a sparsely-supervised setting**
+
+![image](https://ku-cvlab.github.io/MaskingDepth/resources/KITTI_sparse.png)
 
 full
 | Methods | AbsRel ↓ | SqRel ↓ | RMSE ↓ | RMSElog ↓ | δ↑ |
