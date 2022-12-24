@@ -122,10 +122,10 @@ full
 | Baseline | 0.321 ± 0.040 | 0.872 ± 0.042 | 0.124 ± 0.008 | 0.523 ± 0.027 |
 | Ours | 0.292 ± 0.031 | 0.814 ± 0.037 | 0.112 ± 0.006 | 0.561 ± 0.021 |
 
-Qualitative results on the KITTI dataset. (a) RGB image, predicted depth maps by (b), (d) baseline, and (c), (e) ours using 100 and 10,000 labeled frames, respectively.
+**Qualitative results on the KITTI dataset. (a) RGB image, predicted depth maps by (b), (d) baseline, and (c), (e) ours using 100 and 10,000 labeled frames, respectively.**
 ![image](https://ku-cvlab.github.io/MaskingDepth/resources/KITTI_qual.png)
 
-Qualitative results on the NYU-Depth-v2 dataset. (a) RGB image, (b) ground-truth depth map, and predicted depth maps by (c), (e) baseline, and (d), (f) ours using 100 and 10,000 labeled frames, respectively.
+**Qualitative results on the NYU-Depth-v2 dataset. (a) RGB image, (b) ground-truth depth map, and predicted depth maps by (c), (e) baseline, and (d), (f) ours using 100 and 10,000 labeled frames, respectively.**
 ![image](https://ku-cvlab.github.io/MaskingDepth/resources/NYU_qual.png)
 
 
