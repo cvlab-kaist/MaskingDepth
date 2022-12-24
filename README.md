@@ -23,7 +23,7 @@ sh package_install.sh # install additionally package
 * [KITTI](https://www.cvlibs.net/datasets/kitti/)
 * [NYU](https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html)
 
-## train
+## Training
 * supervised leanring:
 
 edit conf/base_train.yaml file 
@@ -39,7 +39,12 @@ python consistency_train.py
 ```
 
 # Evaluatopm
-we refer 
+We evaluate through the [eval_with_pngs.py](https://raw.githubusercontent.com/cogaplex-bts/bts/5a55542ebbe849eb85b5ce9592365225b93d8b28/utils/eval_with_pngs.py) created by [BTS](https://arxiv.org/abs/1907.10326) 
+For evaluation we divide test set according to Eigen split.
+
+| Data | Test set size | Description |
+| KITTI | 652 | Evaluate with the improved ground truth https://www.cvlibs.net/datasets/kitti/eval_depth.php?benchmark=depth_prediction |
+| NYU | 654 | 
 
 
 # Results
@@ -85,6 +90,8 @@ full
 |Baseline+Self| 0.210 ± 0.020 | 1.322 ± 0.042 | 5.627 ± 0.080 | 0.265 ± 0.027 | 0.711 ± 0.016 |
 |Ours+Self | 0.184 ± 0.011 | 1.265 ± 0.064 | 5.747 ± 0.080 | 0.243 ± 0.007 | 0.727 ± 0.018 |
 |Ours | 0.197 ± 0.019 | 1.378 ± 0.032 | 5.650 ± 0.091 | 0.261 ± 0.030 | 0.723 ± 0.017 |
+
+
 
 **Quantitative results on the NYU-Depth-v2 dataset in a sparsely-supervised setting**
 
