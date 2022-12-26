@@ -25,21 +25,21 @@ sh package_install.sh                                    # Install additionally 
 * [NYU](https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html)
 
 ## Training
-* Supervised leanring:
+* Supervised learning:
 
 Edit conf/base_train.yaml file 
 ```
 python trian.py
 ```
 
-* Semi-supervised leanring
+* Semi-supervised learning
 
 Edit conf/consistency_train.yaml file 
 ```
 python consistency_train.py
 ```
 
-# Evaluatopm
+# Evaluation
 We evaluate through the [eval_with_pngs.py](https://raw.githubusercontent.com/cogaplex-bts/bts/5a55542ebbe849eb85b5ce9592365225b93d8b28/utils/eval_with_pngs.py) created by [BTS](https://arxiv.org/abs/1907.10326). For evaluation we divide test set according to Eigen split.
 
 
