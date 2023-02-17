@@ -20,6 +20,10 @@ cd MaskingDepth                                          # Change directory
 sh package_install.sh                                    # Install additionally package 
 ```
 
+we recommend that vit encoder initialize through this weight file.
+![Download ViT ImageNet pretrained weight](https://drive.google.com/file/d/1_yoV7VkSpwGALk26FnYDlTDU0gVI2fP9/view?usp=share_link)
+
+
 ## Dataset
 * [KITTI](https://www.cvlibs.net/datasets/kitti/)
 * [NYU](https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html)
