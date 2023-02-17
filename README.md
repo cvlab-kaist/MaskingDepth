@@ -21,7 +21,7 @@ sh package_install.sh                                    # Install additionally 
 ```
 
 we recommend that vit encoder initialize through this weight file.
-![Download ViT ImageNet pretrained weight](https://drive.google.com/file/d/1_yoV7VkSpwGALk26FnYDlTDU0gVI2fP9/view?usp=share_link)
+[Download ViT ImageNet pretrained weight](https://drive.google.com/file/d/1_yoV7VkSpwGALk26FnYDlTDU0gVI2fP9/view?usp=share_link)
 
 
 ## Dataset
