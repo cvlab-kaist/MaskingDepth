@@ -2,11 +2,11 @@
 [[Project Page]](https://ku-cvlab.github.io/MaskingDepth/ "Project Page")
 [[Paper]](https://arxiv.org/abs/2212.10806)
 
-This code is the implementation of the paper <a href="https://arxiv.org/abs/2212.10806">Semi-Supervised Learning of Monocular Depth Estimation via Consistency Regularization with K-way Disjoint Masking</a> by Baek et al. 
+This code is the implementation of the paper <a href="https://arxiv.org/abs/2212.10806">MaskingDepth: Masked Consistency Regularization for Semi-supervised Monocular Depth Estimation</a> by Baek et al. 
 
 ![image](https://ku-cvlab.github.io/MaskingDepth/resources/overview.png)
 
-Semi-supervised learning (SSL) has been successful in using both labeled and unlabeled data to improve performance. Depth maps, which are used to estimate the distance of objects in a scene, are more expensive to obtain and refine compared to other types of annotations such as image class labels and segmentation labels. Therefore, SSL techniques may be useful for monocular depth estimation, which involves using a single image to estimate depth. However there has not yet been an attempt to apply SSL approaches for monocular depth estimation. Following the successful achievements we first introduce consistency regularization between two differently augmented views from the same image to train the monocular depth estimation network.
+We propose MaskingDepth, a novel semi-supervised learning framework for monocular depth estimation to mitigate the reliance on large ground-truth depth quantities. MaskingDepth is designed to enforce consistency between the strongly-augmented unlabeled data and the pseudo-labels derived from weakly-augmented unlabeled data, which enables learning depth without supervision. In this framework, a novel data augmentation is proposed to take the advantage of a naive masking strategy as an augmentation, while avoiding its scale ambiguity problem between depths from weakly- and strongly-augmented branches and risk of missing small-scale instances. To only retain high-confident depth predictions from the weakly-augmented branch as pseudo-labels, we also present an uncertainty estimation technique, which is used to define robust consistency regularization. Experiments on KITTI and NYU-Depth-v2 datasets demonstrate the effectiveness of each component, its robustness to the use of fewer depth-annotated images, and superior performance compared to other state-of-the-art semi-supervised methods for monocular depth estimation.
 
 ## Environment
 * [NGC pytorch 20.11-py3](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/pytorch/tags) (Docker container)  
