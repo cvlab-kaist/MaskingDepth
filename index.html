@@ -211,39 +211,6 @@
 	</center>
 
 	<hr>
-	<center><h1>Overview of our Framework</h1></center>
-
-	<table align=center width=420px>
-		<center>
-			<tr>
-				<td>
-				</td>
-			</tr>
-		</center>
-	</table>
-	<table align=center width=400px>
-		<tr>
-			<td align=center width=1000px>
-				<center>
-					<td><img class="round" style="width:1000px" src="./resources/overview.png"/></td>
-				</center>
-			</td>
-		</tr>
-	</table>
-	<table align=center width=850px>
-		<center>
-			<tr>
-				<td>
-					Our proposed method consists of two main components; a branch using full tokens (top), and a branch using \(K\)-way disjoint masked tokens (bottom), 
-					where \(K\)-number of subsets are encoded independently and concatenated before decoding. 
-					We use consistency loss \(\mathcal{L}_\mathrm{dc}\) to make predictions between original and augmented images consistent, 
-					aided by an uncertainty measure. Feature consistency loss \(\mathcal{L}_\mathrm{fc}\) is also applied to facilitate the convergence.
-				</td>
-			</tr>
-		</center>
-	</table>
-
-	<hr>
 
 	<table align=center width=850px>
 		<center><h1>Abstract</h1></center>
@@ -297,6 +264,39 @@
 					where \(K\)-number of subsets are encoded independently and concatenated before decoding. 
 					We use consistency loss \(\mathcal{L}_\mathrm{dc}\) to make predictions between original and augmented images consistent, 
 					aided by an uncertainty measure. Feature consistency loss \(\mathcal{L}_\mathrm{fc}\) is also applied to facilitate the convergence.
+				</td>
+			</tr>
+		</center>
+	</table>
+	<hr>
+	<!-- <center><h1>Comparison between navie masking strategy and K-way disjoint masking</h1></center> -->
+	<center><h1>Effectiveness of K-way disjoint masking strategy to handle scale ambiguity</h1></center>
+	<table align=center width=420px>
+		<center>
+			<tr>
+				<td>
+				</td>
+			</tr>
+		</center>
+	</table>
+	<table align=center width=400px>
+		<tr>
+			<td align=center width=1000px>
+				<center>
+					<td><img class="round" style="width:1000px" src="./resources/Masking.png"/></td>
+				</center>
+			</td>
+		</tr>
+	</table>
+	<table align=center width=850px>
+		<center>
+			<tr>
+				<td>
+					(a) RGB image and its masked one. The first row of (b) and
+					(c) are na ̈ıve masking results, and the second row of (b) and (c) are our masking results. 
+					In (d), we visualize the difference map between (b) and (c). 
+					We denote the mean scale difference in the boxed area. Our method better generates scale-consistent results, which in turns
+					helps to better learn the monocular depth estimation networks.
 				</td>
 			</tr>
 		</center>
