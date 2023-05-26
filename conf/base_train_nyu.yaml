@@ -1,30 +1,30 @@
 ##### Supervised Training ######
 Train: 
-  model_name: 'MODEL_NAME'  	## model names to save log file or wandb.
-  log_path: './log'   		## path to the log file, only works when the wandb option is False.
+  model_name: 'NYU_uncert_vis'  ## model names to save log file or wandb.
+  log_path: './log' ## path to the log file, only works when the wandb option is False.
   use_cuda: True
   seed: 41
   start_epoch: 0
-  end_epoch: 50
+  end_epoch: 30
   batch_size: 4
   num_workers: 8
   lr: 1e-4
-  d_consistency : 0.0		## depth consistency loss weight
-  f_consistency : 0.0		## feature consistency loss weight
-  K: 1				## set number of K for K-way masking, 64 is the default
-  wandb : False
+  d_consistency : 0.0  ## depth consistency loss weight
+  f_consistency : 0.0 ## feature consistency loss weight
+  K: 1                ## set number of K for K-way masking, 64 is the default
+  wandb : True
   load_optim : False
   
   model:
     baseline: "DPT" # ["DPT", "monodepth2"]
     max_depth: 10.0 # use 10 for NYU and 80 for KITTI depth
     load_weight : False
-    weight_path : './weight'
-    mlp_head: False		## prediction head for feature consistency loss
-  add_model:				
-    uncert: False			## use uncertainty network. if True, consistency loss is weighted by uncertainty
+    weight_path : './log/NYU_uncert_vis/weigts_3'
+    mlp_head: False   ## prediction head for feature consistency loss
+  add_model:
+    uncert: True   ## use uncertainty network. if True, consistency loss is weighted by uncertainty
     load_weight : False
-    weight_path : './weight'
+    weight_path : './log/NYU_uncert_vis/weigts_3'
     threshold: 0.7
 
   data:
@@ -32,5 +32,5 @@ Train:
     width: 640
     dataset: 'nyu'
     splits: 'nyu'
-    data_path: 'DATA_PATH'
+    data_path: '/root/dataset1/nyu/'
     img_ext: '.jpg'

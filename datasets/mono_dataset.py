@@ -113,7 +113,6 @@ class MonoDataset(data.Dataset):
             weak_aug = transforms.ColorJitter(
                             self.brightness, self.contrast, self.saturation, self.hue)
             inputs["color"] = self.to_tensor(self.resize(weak_aug(inputs["color"])))
-            torchvision.utils.save_image(inputs["color"], "./aaa.png")
         else:
             inputs["color"] = self.to_tensor(self.resize(inputs["color"]))
                         
@@ -143,7 +142,7 @@ class MonoDataset(data.Dataset):
 
         if type(self).__name__ in "CityscapeDataset":
             folder, frame_index, side = self.index_to_folder_and_frame_idx(index)
-            inputs.update(self.get_color(folder, frame_index, side, do_flip))
+            inputs["color"] = self.get_color(folder, frame_index, side, do_flip)
 
         elif type(self).__name__ in "NYUDataset" or type(self).__name__ in "Virtual_Kitti":
             if type(self).__name__ in "NYUDataset":
@@ -175,15 +174,15 @@ class MonoDataset(data.Dataset):
 
             inv_K = np.linalg.pinv(K)
 
-            inputs["K"] = torch.from_numpy(K)
-            inputs["inv_K"] = torch.from_numpy(inv_K)
+            # inputs["K"] = torch.from_numpy(K)
+            # inputs["inv_K"] = torch.from_numpy(inv_K)
 
             stereo_T = np.eye(4, dtype=np.float32)
             baseline_sign = -1 if do_flip else 1
             side_sign = -1 if side == "l" else 1
             stereo_T[0, 3] = side_sign * baseline_sign * 0.1
 
-            inputs["stereo_T"] = torch.from_numpy(stereo_T)
+            # inputs["stereo_T"] = torch.from_numpy(stereo_T)
 
         self.preprocess(inputs)
         

@@ -42,6 +42,7 @@ def baseline_model_load(model_cfg, device):
                         depth = 12,
                         heads = 12,
                         mlp_dim = 3072)
+        v.load_state_dict(torch.load("./vit_base_384.pth"))
         v.resize_pos_embed(192,640)
 
         model['depth'] = networks.Masked_DPT(encoder=v,
@@ -50,7 +51,29 @@ def baseline_model_load(model_cfg, device):
                         hooks=[2, 5, 8, 11],
                         vit_features=768,
                         use_readout='project')
-        
+
+    elif model_cfg.baseline == 'DPT_L':
+        v = networks.ViT(image_size = (384,384),
+                        patch_size = 16,
+                        num_classes = 1000,
+                        dim = 1024,
+                        depth = 24,
+                        heads = 16,
+                        mlp_dim = 4096)
+
+        v.load_state_dict(torch.load("./dpt_encoder.pth"))
+        v.resize_pos_embed(192,640)
+
+        model['depth'] = networks.Masked_DPT(encoder=v,
+                        max_depth = model_cfg.max_depth,
+                        features=[256, 512, 1024, 1024],
+                        hooks=[5, 11, 17, 23] ,
+                        vit_features=1024,
+                        use_readout='project')
+
+        # model['depth'].load_state_dict(torch.load("./dpt_large.pth"))
+        # model['depth'].resize_image_size(192,640)
+
     elif model_cfg.baseline == 'DPT_H':
         v = networks.ViT(image_size = (384,384),
                         patch_size = 16,
@@ -84,6 +107,9 @@ def baseline_model_load(model_cfg, device):
             out_c = 1024
         elif model_cfg.baseline == 'DPT_H':
             in_c = [768,768,768,768]
+            out_c = 1024
+        elif model_cfg.baseline == 'DPT_L':
+            in_c = [1024,1024,1024,1024]
             out_c = 1024
         elif model_cfg.baseline == 'monodepth2':
             in_c = [64,256,512,1024,2048]
@@ -153,7 +179,8 @@ def data_loader(data_cfg, batch_size, num_workers):
                     "kitti_odom": datasets.KITTIOdomDataset,
                     "kitti_depth": datasets.KITTIDepthDataset,
                     "nyu": datasets.NYUDataset,
-                    "virtual_kitti": datasets.Virtual_Kitti}
+                    "virtual_kitti": datasets.Virtual_Kitti,
+                    'cityscape': datasets.CityscapeDataset}
 
     dataset = datasets_dict[data_cfg.dataset]
     fpath = os.path.join(os.path.dirname(__file__), "splits", data_cfg.splits, "{}_files.txt")
@@ -178,7 +205,7 @@ def data_loader(data_cfg, batch_size, num_workers):
     return train_loader, val_loader
 
 def double_data_loader(labeled_cfg, unlabeled_cfg, batch_size, num_workers):
-    RATIO = 7
+    RATIO = 1
     
     #fix match (semi supervised)
     if labeled_cfg.dataset == unlabeled_cfg.dataset:

@@ -110,7 +110,7 @@ if __name__ == "__main__":
                     progress.write(f'(epoch:{epoch+1} / (iter:{i+1})) >> loss:{losses}\n') 
             
             # save model & optimzier (.pth)
-            if epoch % 5 == 4:
+            if epoch % 5 == 1:
                 utils.save_component(train_cfg.log_path, train_cfg.model_name, epoch, model, optimizer)
 
             #validation

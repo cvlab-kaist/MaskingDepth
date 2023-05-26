@@ -20,7 +20,9 @@ def compute_loss(inputs, model, train_cfg, mode = TRAIN):
     else:
         pred_depth = F.interpolate(pred_depth, inputs['depth_gt'].shape[-2:], mode="bilinear", align_corners = False)
         losses['sup_loss'] = compute_sup_loss(pred_depth, inputs['depth_gt'], (inputs['depth_gt'] > 0).detach())
-    
+        # losses['sup_loss'] = torch.clamp(compute_sup_loss(pred_depth, inputs['depth_gt'], (inputs['depth_gt'] > 0).detach()), 0, 20)
+    # torchvision.utils.save_image(pred_de
+
     ### make uncertainty map
     if 'uncert_decoder' in model.keys():
         pred_uncert = uncert_forward(fusion_features, model)

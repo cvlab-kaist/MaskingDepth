@@ -1,28 +1,28 @@
-##### Semi-supervised Training ######
+##### Supervised Training ######
 Train: 
-  model_name: 'MODEL_NAME'			## model names to save log file or wandb.
-  log_path: './log'				## path to the log file, only works when the wandb option is False.
+  model_name: 'cityscape_test' ## model names to save log file or wandb.
+  log_path: '/root/data1/weights' ## path to the log file, only works when the wandb option is False.
   use_cuda: True
-  seed: 41
+  seed: 42
   start_epoch: 0
-  end_epoch: 200
-  batch_size: 8
-  num_workers: 8 
+  end_epoch: 50
+  batch_size: 2
+  num_workers: 8
   lr: 1e-4
-  d_consistency : 1.0				## depth consistency loss weight
-  f_consistency : 1.0				## feature consistency loss weight		
-  K : 64						## set number of K for K-way masking, 64 is the default
-  wandb : False
+  d_consistency : 1.0  ## depth consistency loss weight
+  f_consistency : 1.0  ## feature consistency loss weight
+  K: 64  ## set number of K for K-way masking, 64 is the default
+  wandb : True
   load_optim : False
   
   model:
-    baseline: "DPT" # ["DPT", "monodepth2"]
+    baseline: "DPT_L" # ["DPT", "monodepth2"]
     max_depth: 80.0 # use 10 for NYU and 80 for KITTI depth
     load_weight : False
-    weight_path : './weight'
-    mlp_head: True					## prediction head for feature consistency loss
+    weight_path : './dpt_large.pth'
+    mlp_head: True ## prediction head for feature consistency loss
   add_model:
-    uncert: True					## use uncertainty network. if True, consistency loss is weighted by uncertainty
+    uncert: True ## use uncertainty network. if True, consistency loss is weighted by uncertainty
     load_weight : False
     weight_path : './weight'
     threshold: 0.7
@@ -32,14 +32,13 @@ Train:
     width: 640
     dataset: 'kitti_depth'
     splits: 'eigen_temp'
-    data_path: 'DATA_PATH'
+    data_path: '/root/data1/KITTI'
     img_ext: '.jpg'
 
   unlabeled_data:
     height: 192
     width: 640
-    dataset: 'kitti_depth'
-    splits: 'eigen_temp'
-    data_path: 'DATA_PATH'
+    dataset: 'cityscape'
+    splits: 'cityscape'
+    data_path: "/root/dataset1/CityScape/leftImg8bit_sequence/"
     img_ext: '.jpg'
-
