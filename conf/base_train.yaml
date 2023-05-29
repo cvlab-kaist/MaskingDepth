@@ -1,11 +1,11 @@
 ##### Supervised Training ######
 Train: 
-  model_name: 'cityscape_test' ## model names to save log file or wandb.
+  model_name: 'dropout_aug' ## model names to save log file or wandb.
   log_path: '/root/data1/weights' ## path to the log file, only works when the wandb option is False.
   use_cuda: True
   seed: 42
   start_epoch: 0
-  end_epoch: 50
+  end_epoch: 30
   batch_size: 8
   num_workers: 8
   lr: 1e-4
@@ -16,7 +16,7 @@ Train:
   load_optim : False
   
   model:
-    baseline: "DPT_L" # ["DPT", "monodepth2"]
+    baseline: "DPT" # ["DPT", "monodepth2"]
     max_depth: 80.0 # use 10 for NYU and 80 for KITTI depth
     load_weight : False
     weight_path : './dpt_large.pth'
@@ -30,7 +30,8 @@ Train:
   data:
     height: 192
     width: 640
-    dataset: 'cityscape'
-    splits: 'cityscape'
-    data_path: "/root/dataset1/CityScape/leftImg8bit_sequence/"
+    dataset: 'kitti_depth'
+    splits: 'eigen_temp'
+    data_path: '/root/data1/KITTI'
     img_ext: '.jpg'
+

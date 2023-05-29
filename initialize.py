@@ -41,7 +41,8 @@ def baseline_model_load(model_cfg, device):
                         dim = 768,
                         depth = 12,
                         heads = 12,
-                        mlp_dim = 3072)
+                        mlp_dim = 3072,
+                        dropout= 0.5)
         v.load_state_dict(torch.load("./vit_base_384.pth"))
         v.resize_pos_embed(192,640)
 
