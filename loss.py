@@ -11,7 +11,7 @@ def compute_loss(inputs, model, train_cfg, mode = TRAIN):
     losses = {}
     total_loss = 0
 
-    pred_depth, full_features, fusion_features = model_forward(inputs['color'], model)
+    pred_depth, full_features, fusion_features = model_forward(inputs['color'], model, drop_prob=train_cfg.drop_prob)
 
     ### compute supervised loss 
     if train_cfg.data.dataset in ['nyu'] or train_cfg.unlabeled_data.dataset in ['nyu']:
@@ -115,8 +115,8 @@ def compute_semi_loss(label, unlabel, model, train_cfg, mode = TRAIN):
 ############################################################################## 
 
 # main network forward
-def model_forward(inputs, model, K=1):  
-    pred_depth, features, fusion_features = model['depth'](inputs, K)
+def model_forward(inputs, model, K=1, drop_prob=0.0):  
+    pred_depth, features, fusion_features = model['depth'](inputs, K, drop_prob=drop_prob)
     return pred_depth, features, fusion_features
 
 # (additional) uncertainty network forward

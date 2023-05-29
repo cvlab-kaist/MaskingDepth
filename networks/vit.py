@@ -58,7 +58,7 @@ class Attention(nn.Module):
             nn.Dropout(dropout)
         ) if project_out else nn.Identity()
 
-    def forward(self, x, mask=None):
+    def forward(self, x, mask=None, drop_True=False):
         qkv = self.to_qkv(x).chunk(3, dim = -1)
         q, k, v = map(lambda t: rearrange(t, 'b n (h d) -> b h n d', h = self.heads), qkv)
 
@@ -69,8 +69,8 @@ class Attention(nn.Module):
             dots[:,:, mask==0.0] = -10.0
         
         attn = self.attend(dots)
-        attn = self.dropout(attn)
-
+        if drop_True:
+            attn = self.dropout(attn)
         out = torch.matmul(attn, v)
         out = rearrange(out, 'b h n d -> b n (h d)')
         return self.to_out(out)
@@ -90,15 +90,16 @@ class Transformer(nn.Module):
     def set_hooks(self, hooks):
         self.hooks = hooks
     
-    def forward(self, x, mask=None):
+    def forward(self, x, mask=None, drop_prob=0.0):
         i = 0
         ll = []
+        drop_True = torch.rand(1) < drop_prob
         for attn, ff in self.layers:
             # if mask == None or i in self.hooks[-1]:
             if mask == None:
-                x = attn(x) + x
+                x = attn(x, drop_True=drop_True) + x
             else:
-                x = attn.fn(attn.norm(x),mask) + x
+                x = attn.fn(attn.norm(x),mask, drop_True=drop_True) + x
 
             x = ff(x) + x
             if i in self.hooks:

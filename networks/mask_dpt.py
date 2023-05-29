@@ -131,7 +131,7 @@ class Masked_DPT(nn.Module):
         self.max_depth = max_depth
         self.target_size = encoder.get_image_size()
 
-    def forward(self, img, K = 1):
+    def forward(self, img, K = 1, drop_prob=0.0):
         # assert mask_ratio >= 0 and mask_ratio < 1, 'masking ratio must be kept between 0 and 1'
 
         x = self.encoder.to_patch_embedding(img)
@@ -140,7 +140,7 @@ class Masked_DPT(nn.Module):
         x = self.encoder.dropout(x)
         
         if K == 1:
-            glob = self.encoder.transformer(x)
+            glob = self.encoder.transformer(x, drop_prob=drop_prob)
 
             layer_1 = self.encoder.transformer.features[0] 
             layer_2 = self.encoder.transformer.features[1] 
@@ -171,7 +171,6 @@ class Masked_DPT(nn.Module):
             partial_token = self.encoder.transformer(x, (mask_v.transpose(0,1) @ mask_v))
             reform_indices = torch.argsort(rand_indices, dim=1)
 
-            
             #no class
             layer_1 = self.act_postprocess1[0](self.encoder.transformer.features[0][batch_range, reform_indices])
             layer_2 = self.act_postprocess2[0](self.encoder.transformer.features[1][batch_range, reform_indices])
