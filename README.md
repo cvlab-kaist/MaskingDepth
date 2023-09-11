@@ -33,7 +33,7 @@ we recommend that vit encoder initialize through this weight file.
 
 Edit conf/base_train.yaml file. See the comments in the configuration file for detail options. 
 ```
-python trian.py
+python train.py
 ```
 
 * Semi-supervised learning
